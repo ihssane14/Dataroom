@@ -1,0 +1,6 @@
+[2024-01-15 09:05:18] ERROR - Database connection timeout (attempt 1/3)
+[2024-01-15 09:05:23] ERROR - Database connection timeout (attempt 2/3)
+[2024-01-15 09:05:28] INFO - Database connection re-established
+[2024-01-15 10:30:44] ERROR - Payment gateway API rate limit exceeded
+[2024-01-15 11:15:33] WARNING - High memory usage detected (87%)
+[2024-01-15 13:45:22] ERROR - File upload failed: size exceeds limit

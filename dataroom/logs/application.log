@@ -1,0 +1,4 @@
+[2024-01-15 09:00:01] INFO - Application started
+[2024-01-15 09:15:22] INFO - User admin logged in
+[2024-01-15 10:30:45] ERROR - Database connection failed
+[2024-01-15 11:45:33] INFO - Backup completed
