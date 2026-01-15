@@ -1,5 +1,0 @@
-EMPLOYEE HANDBOOK
-Security Policies:
-1. Passwords must be changed every 90 days
-2. Report security incidents immediately
-3. Encrypt sensitive documents
