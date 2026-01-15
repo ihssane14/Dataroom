@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documents - DataRoom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .document-viewer {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .file-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #e9ecef;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .available-docs {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .doc-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .doc-list li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .doc-list li:hover {
+            background: #f8f9fa;
+        }
+        
+        .doc-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ffeaa7;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/dashboard" class="back-link">← Back to Dashboard</a>
+        <h1 style="margin: 10px 0; color: #0066cc;">📁 Document Management</h1>
+        <p>Access and view corporate documents</p>
+    </div>
+    
+    <div class="document-viewer">
+        <h2>Document Viewer</h2>
+        
+        <div class="warning">
+            <strong>⚠️ Note:</strong> Enter full path to document (e.g., documents/report.txt)
+        </div>
+        
+        <form method="GET">
+            <input type="text" name="file" 
+                   placeholder="Enter document path (e.g., documents/report.txt)" 
+                   value="{{ filename }}">
+            <button type="submit">Load Document</button>
+        </form>
+        
+        {% if content %}
+        <div style="margin-top: 20px;">
+            <h3>Document Content:</h3>
+            <div class="file-content">
+                {{ content }}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="available-docs">
+        <h3>Available Documents</h3>
+        <ul class="doc-list">
+            <li>
+                <a href="/documents?file=documents/report.txt" class="doc-link">
+                    📄 report.txt - Financial Report
+                </a>
+            </li>
+            <li>
+                <a href="/documents?file=documents/handbook.txt" class="doc-link">
+                    📘 handbook.txt - Employee Handbook
+                </a>
+            </li>
+            <li>
+                <a href="/documents?file=logs/application.log" class="doc-link">
+                    📋 application.log - Application Logs
+                </a>
+            </li>
+            <li>
+                <a href="/documents?file=logs/security.log" class="doc-link">
+                    🔒 security.log - Security Logs
+                </a>
+            </li>
+        </ul>
+        
+        <div style="margin-top: 20px; color: #666; font-size: 14px;">
+           
+        </div>
+    </div>
+</body>
+</html>
