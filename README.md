@@ -1,10 +1,9 @@
-# Dataroom
 DataRoom Enterprise
-Project Description
+Description
 
-DataRoom Enterprise is an educational web security project that demonstrates real-world vulnerabilities in a simulated enterprise web application.
+DataRoom Enterprise is an educational web security project that demonstrates common vulnerabilities in a simulated enterprise web application.
 
-The project focuses on two critical OWASP Top 10 vulnerabilities:
+The project focuses on two critical vulnerabilities from the OWASP Top 10:
 
 Directory Traversal
 
@@ -12,59 +11,27 @@ Command Injection
 
 These vulnerabilities are intentionally implemented for learning and demonstration purposes.
 
-Features
-
-Enterprise-style admin dashboard
-
-Document management system
-
-System administration module
-
-Security logs and audit interface
-
-Automated vulnerability demonstrations
-
-Demonstrated Vulnerabilities
-Directory Traversal
-
-Allows unauthorized access to sensitive files such as configuration and API key files.
-
-Command Injection
-
-Executes operating system commands due to improper input validation.
-
 Technologies Used
 
-Backend: Python, Flask
+Python
 
-Frontend: HTML (Jinja2), CSS
+Flask
 
-Environment: Localhost, Windows
+HTML (Jinja2)
 
-Project Structure
-DATAROOM/
-│
-├── app.py
-├── requirements.txt
-├── config/
-│   ├── api_keys.txt
-│   └── database.conf
-├── documents/
-│   ├── handbook.txt
-│   └── report.txt
-├── logs/
-│   ├── application.log
-│   └── security.log
-└── templates/
-    ├── audit.html
-    ├── dashboard.html
-    ├── documents.html
-    ├── login.html
-    ├── logs.html
-    ├── system_admin.html
-    └── users.html
+CSS
+
+Purpose
+
+The goal of this project is to:
+
+Understand how web vulnerabilities work
+
+Demonstrate their impact in a real application
+
+Show how secure coding practices can prevent them
 
 Disclaimer
 
- This project is developed strictly for educational purposes.
-The vulnerabilities are intentional and must not be used in production environments.
+ This project is developed for educational purposes only.
+Do not deploy this application in a production environment.
